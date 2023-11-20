@@ -47,6 +47,9 @@ class _NewExpenseState extends State<NewExpense> {
   void submitExpenseData() {
     final enteredAmount = double.tryParse(_amountController
         .text); // tryParse retruns num(str) if possible, null else
+
+    // print("enteredAmount: $enteredAmount");
+
     final amountisInvalid = enteredAmount == null || enteredAmount <= 0;
     if (_titleController.text.trim().isEmpty ||
         amountisInvalid ||
